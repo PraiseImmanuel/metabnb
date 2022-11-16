@@ -1,0 +1,110 @@
+.nav-fixed {
+    background-color: white;
+    position: fixed;
+    width: 100%;
+}
+
+.nav-wrapper {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 1rem 1.5rem;
+    position: relative;
+    width: 100%;
+    height: 100%;
+}
+
+.logo > img {
+    width: 10rem;
+}
+
+.links-and-button-wrapper {
+    background-color: rgba(0, 0, 0, 0.775);
+    backdrop-filter: blur(1px);
+    height: 100vh;
+    position: absolute;
+    right: 0;
+    top: 5rem;
+    width: 100%;
+}
+
+.links-and-button {
+    background-color: white;
+    border-radius: 1rem;
+    text-align: center;
+    margin: 1.5rem;
+    padding: 1rem;
+}
+
+li {
+    padding: 0.5rem 0;
+}
+
+li > a {
+    color: #434343;
+    font-size: 1.25rem;
+}
+
+.connect-button {
+    background: linear-gradient(90deg, #a02279 11.45%, #a02279 11.45%);
+    border-radius: 10px;
+    color: white;
+    margin: 0.5rem auto;
+    padding: 0.8rem 2rem;
+    width: fit-content;
+}
+
+.connect-button.desktop {
+    display: none;
+}
+
+.display-none {
+    display: none;
+}
+
+@media screen and (min-width: 990px) {
+    .nav-wrapper {
+        padding: 1rem 3rem;
+    }
+
+    .links-and-button-wrapper {
+        background-color: transparent;
+        height: auto;
+        position: static;
+        width: auto;
+    }
+
+    .links-and-button,
+    .links ul {
+        display: flex;
+        align-items: center;
+        margin: 0;
+    }
+
+    li {
+        padding: 0 1rem;
+    }
+
+    .hamburger-react {
+        display: none;
+    }
+
+    .connect-button.desktop {
+        display: block;
+        margin: 0;
+    }
+
+    .connect-button.mobile {
+        display: none;
+    }
+
+    .display-none {
+        display: block;
+    }
+}
+
+@media screen and (min-width: 1095px) {
+    .nav-wrapper {
+        padding: 1rem 6.25rem;
+    }
+}

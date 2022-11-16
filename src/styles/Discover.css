@@ -1,0 +1,66 @@
+.discover-wrapper {
+    background: linear-gradient(90deg, #a02279 11.45%, #a02279 11.45%);
+    color: #ffffff;
+    display: flex;
+    flex-direction: column-reverse;
+    padding: 2.5rem 1rem;
+}
+
+.discover-wrapper .image > img {
+    width: 100%;
+}
+
+.discover-wrapper .text {
+    margin-top: 2.5rem;
+    text-align: center;
+}
+
+.discover-wrapper h2 {
+    font-size: clamp(2rem, 4vw, 3rem);
+}
+
+.discover-wrapper p {
+    margin: 2.25rem 0 3.25rem 0;
+}
+
+.discover-wrapper button {
+    background: linear-gradient(124.4deg, #ffffff 10.8%, #ffffff 87.34%);
+    border: none;
+    border-radius: 0.5rem;
+    color: #a02279;
+    padding: 0.7rem 2rem;
+}
+
+@media screen and (min-width: 495px) {
+    .discover-wrapper p {
+        margin: 2.25rem auto 3.25rem;
+        max-width: 26rem;
+    }
+}
+
+@media screen and (min-width: 768px) {
+    .discover-wrapper {
+        flex-direction: row;
+        align-items: center;
+    }
+
+    .discover-wrapper .text {
+        text-align: left;
+    }
+
+    .discover-wrapper p {
+        max-width: 26rem;
+    }
+}
+
+@media screen and (min-width: 990px) {
+    .discover-wrapper {
+        padding: 4rem 3rem;
+    }
+}
+
+@media screen and (min-width: 1095px) {
+    .discover-wrapper {
+        padding: 6.25rem;
+    }
+}

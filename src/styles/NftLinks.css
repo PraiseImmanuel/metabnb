@@ -1,0 +1,29 @@
+.nft-links {
+    align-items: center;
+    background: linear-gradient(90deg, #a02279 11.45%, #a02279 11.45%);
+    display: flex;
+    flex-direction: column;
+    padding: 1rem 0;
+    width: 100%;
+}
+
+.nft-link > img {
+    width: 10rem;
+}
+
+@media screen and (min-width: 575px) {
+    .nft-links {
+        flex-direction: row;
+        justify-content: space-between;
+    }
+
+    .nft-link {
+        padding: 0 1rem;
+    }
+}
+
+@media screen and (min-width: 990px) {
+    .nft-links {
+        padding: 1.25rem 6.25rem;
+    }
+}
