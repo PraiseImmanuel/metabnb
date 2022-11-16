@@ -49,6 +49,7 @@ li > a {
     background: linear-gradient(90deg, #a02279 11.45%, #a02279 11.45%);
     border-radius: 10px;
     color: white;
+    cursor: pointer;
     margin: 0.5rem auto;
     padding: 0.8rem 2rem;
     width: fit-content;
@@ -58,7 +59,72 @@ li > a {
     display: none;
 }
 
-.display-none {
+.connect-wallet-form {
+    align-items: center;
+    background-color: rgba(0, 0, 0, 0.775);
+    backdrop-filter: blur(1px);
+    display: flex;
+    height: 100vh;
+    justify-content: center;
+    position: absolute;
+    right: 50%;
+    top: 0;
+    transform: translateX(50%);
+    width: 100vw;
+}
+
+.connect-wallet-wrapper {
+    background: #ffffff;
+    border-radius: 1rem;
+    width: clamp(18.75rem, 40vw, 35rem);
+}
+
+.heading {
+    border-bottom: 1px solid #cfd8dc;
+    color: #333333;
+    display: flex;
+    justify-content: space-between;
+    padding: 1rem 2rem;
+}
+
+.heading > img {
+    cursor: pointer;
+}
+
+.wallets {
+    padding: 2rem;
+}
+
+.wallets > p {
+    padding-bottom: 1rem;
+}
+
+.wallet {
+    align-items: center;
+    border: 1px solid #cfd8dc;
+    border-radius: 0.75rem;
+    display: flex;
+    justify-content: space-between;
+    padding: 0.25rem 1.5rem;
+}
+
+.wallet:first-of-type {
+    background: #f8f9fa;
+    margin-bottom: 1rem;
+}
+
+.wallet-name {
+    align-items: center;
+    display: flex;
+}
+
+.wallet-name > img {
+    margin-right: 1rem;
+    width: 60%;
+}
+
+.display-none,
+.display-wallet-none {
     display: none;
 }
 

@@ -3,6 +3,7 @@ import { useState } from "react";
 import { Sling as Hamburger } from "hamburger-react";
 const Nav = () => {
     const [isOpen, setOpen] = useState(false);
+    const [connectOpen, setConnectOpen] = useState(false);
 
     return (
         <nav>
@@ -24,28 +25,36 @@ const Nav = () => {
                             <div className="links">
                                 <ul>
                                     <li>
-                                        <a href="www.p.com">Home</a>
+                                        <a href="/">Home</a>
                                     </li>
                                     <li>
-                                        <a href="www.p.com">Place to stay</a>
+                                        <a href="/placetostay">Place to stay</a>
                                     </li>
                                     <li>
-                                        <a href="www.p.com">NFTs</a>
+                                        <a href="#nfts">NFTs</a>
                                     </li>
                                     <li>
-                                        <a href="www.p.com">Community</a>
+                                        <a href="#community">Community</a>
                                     </li>
                                 </ul>
                             </div>
 
                             {/* display only on mobile */}
-                            <div className="connect-button mobile">
+                            <div
+                                onClick={() => setConnectOpen(!connectOpen)}
+                                className="connect-button mobile"
+                            >
                                 Connect wallet
                             </div>
                         </div>
                     </div>
                     {/* display only on desktop */}
-                    <div className="connect-button desktop">Connect wallet</div>
+                    <div
+                        onClick={() => setConnectOpen(!connectOpen)}
+                        className="connect-button desktop"
+                    >
+                        Connect wallet
+                    </div>
                     <Hamburger
                         toggled={isOpen}
                         toggle={setOpen}
@@ -53,18 +62,51 @@ const Nav = () => {
                         size={30}
                     />
 
-                    <div className="connect-wallet-form">
-                        <h3>Connect Wallet</h3>
-                        <div className="wallet">
-                            <p>Choose your preferred wallet</p>
-                            <div className="wallet">
-                                <img src="./images/" alt="" />
-                                <span>Metamask</span>
+                    <div
+                        className={`connect-wallet-form ${
+                            connectOpen || "display-wallet-none"
+                        }`}
+                    >
+                        <div className="connect-wallet-wrapper">
+                            <div className="heading">
+                                <h3>Connect Wallet</h3>
+                                <img
+                                    src="./images/cancel.svg"
+                                    alt=""
+                                    onClick={() => setConnectOpen(!connectOpen)}
+                                />
                             </div>
+                            <div className="wallets">
+                                <p>Choose your preferred wallet</p>
+                                <div className="wallet">
+                                    <div className="wallet-name">
+                                        <img
+                                            src="./images/metamask-2.svg"
+                                            alt=""
+                                        />
+                                        <span>Metamask</span>
+                                    </div>
 
-                            <div className="wallet">
-                                <img src="./images/" alt="" />
-                                <span>WalletConnect</span>
+                                    <img
+                                        src="./images/right-bracket.svg"
+                                        alt=""
+                                    />
+                                </div>
+
+                                <div className="wallet">
+                                    <div className="wallet-name">
+                                        <img
+                                            src="./images/wallet-connect.svg"
+                                            alt=""
+                                        />
+                                        <span>Walletconnect</span>
+                                    </div>
+
+                                    <img
+                                        src="./images/right-bracket.svg"
+                                        alt=""
+                                    />
+                                </div>
                             </div>
                         </div>
                     </div>

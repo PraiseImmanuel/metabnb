@@ -2,7 +2,7 @@ import "../styles/Discover.css";
 
 const Discover = () => {
     return (
-        <section>
+        <section id="Community">
             <div className="discover-wrapper">
                 <div className="text">
                     <h2>Metabnb NFTs</h2>

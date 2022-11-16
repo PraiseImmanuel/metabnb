@@ -25,7 +25,7 @@ const renderInspirationCard = (img) => {
 
 const Inspiration = () => {
     return (
-        <section>
+        <section id="nfts">
             <div className="inspiration-wrapper">
                 <h2>Inspiration for your next adventure</h2>
                 <div className="inspiration-cards-container">
